@@ -13,7 +13,7 @@ export async function GET(req) {
 }
 
 export async function POST(req) {
-  await connectDB
+  await connectDB()
   try {
     const { title, description, status } = await req.json();
     if (!title) {
